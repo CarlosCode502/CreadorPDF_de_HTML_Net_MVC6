@@ -11,4 +11,7 @@
         <a class="btn btn-primary" asp-controller="Home" asp-action="MostrarPdfenPagina" target="_blank">Ver Pdf</a>
         <a class="btn btn-secondary" asp-controller="Home" asp-action="DescargarPdf">Descargar Pdf</a>
     </div>
+    <div class="mt-2">
+        <embed src="@Url.Action("MostrarPdfenPagina","Home")" width="800" height="600" type="application/pdf" />
+    </div>
 </div>
