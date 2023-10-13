@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreadorPDF_de_HTML_Net_MVC6", "CreadorPDF_de_HTML_Net_MVC6\CreadorPDF_de_HTML_Net_MVC6.csproj", "{D67FAFFD-E52C-4378-8072-3408B370F23A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D67FAFFD-E52C-4378-8072-3408B370F23A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D67FAFFD-E52C-4378-8072-3408B370F23A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D67FAFFD-E52C-4378-8072-3408B370F23A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D67FAFFD-E52C-4378-8072-3408B370F23A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {896D3748-5A8B-40F6-8E61-73A7F0A79CF0}
+	EndGlobalSection
+EndGlobal
