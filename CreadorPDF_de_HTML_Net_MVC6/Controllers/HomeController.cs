@@ -45,9 +45,33 @@ namespace CreadorPDF_de_HTML_Net_MVC6.Controllers
             url_pagina = url_pagina.Replace(pagina_actual, "");
             url_pagina = $"{url_pagina}/Home/VistaPdf";
             
+            //min 14:45
+            //Se crea un nuevo elemento del tipo
+            var configuraciones_pdf = new HtmlToPdfDocument(){
+                //Parámetros de configuración global settings
+                GlobalSettings = new GlobalSettings()
+                {
+                    PaperSize = PaperKind.A4, //Tam de pagina
+                    Orientation = Orientation.Portrait //Orientacion de pagina
+                },
+                //Parámetros de configuración
+                Objects = {
+                    new ObjectSettings()
+                    {
+                        Page = url_pagina //Se le asigna la url de la pag que se desea convertir a pdf
+                    }
+                }
+            };
 
+            //min 16:10
+            //convertir archivo a pdf
+            //Accedemos al convert y le pasamos la configuracion_pdf
+            var archivoAPdf = converter.Convert(configuraciones_pdf);
 
-            return View();
+            //return View();
+            //Como se va a retornar un archivo min 17:00
+            //al final se especifica el tipo del archivo
+            return File(archivoAPdf, "application/pdf");
         }
 
         public IActionResult Privacy()
