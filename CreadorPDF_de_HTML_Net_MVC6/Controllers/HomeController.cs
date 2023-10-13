@@ -74,6 +74,40 @@ namespace CreadorPDF_de_HTML_Net_MVC6.Controllers
             return File(archivoAPdf, "application/pdf");
         }
 
+        //min 17:25
+        //Va a servir para descargar el pdf(todo casi igual que crearlo)
+
+        public IActionResult DescargarPdf()
+        {
+            string pagina_actual = HttpContext.Request.Path;
+            string url_pagina = HttpContext.Request.GetEncodedUrl();
+            url_pagina = url_pagina.Replace(pagina_actual, "");
+            url_pagina = $"{url_pagina}/Home/VistaPdf";
+
+            var configuraciones_pdf = new HtmlToPdfDocument()
+            {
+                GlobalSettings = new GlobalSettings()
+                {
+                    PaperSize = PaperKind.A4,
+                    Orientation = Orientation.Portrait
+                },
+
+                Objects = {
+                    new ObjectSettings()
+                    {
+                        Page = url_pagina
+                    }
+                }
+            };
+
+            var archivoAPdf = converter.Convert(configuraciones_pdf);
+            //nombre que va a tener el pdf que se va a descargar. min 17:45
+            string nombrePDF = "Reporte_" + DateTime.Now.ToString("ddMMyyyyHHmmss") + ".pdf";
+
+            //retorna un archivo de tipo pdf con el nombre especifico min 18:30
+            return File(archivoAPdf, "application/pdf", nombrePDF);
+        }
+
         public IActionResult Privacy()
         {
             return View();
