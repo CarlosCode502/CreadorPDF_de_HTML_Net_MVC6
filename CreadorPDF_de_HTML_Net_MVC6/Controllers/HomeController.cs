@@ -44,14 +44,15 @@ namespace CreadorPDF_de_HTML_Net_MVC6.Controllers
             //se va a reemplazar por la pagina actual y se va a borrar
             url_pagina = url_pagina.Replace(pagina_actual, "");
             url_pagina = $"{url_pagina}/Home/VistaPdf";
-            
+
             //min 14:45
             //Se crea un nuevo elemento del tipo
-            var configuraciones_pdf = new HtmlToPdfDocument(){
+            var configuraciones_pdf = new HtmlToPdfDocument() {
                 //Parámetros de configuración global settings
                 GlobalSettings = new GlobalSettings()
                 {
-                    PaperSize = PaperKind.LegalExtra, //Tam de pagina
+                    //PaperSize = PaperKind.Legal, //Tam de pagina
+                    PaperSize = new PechkinPaperSize("170", "375"), //Tam de papel personalizado Width y height
                     Orientation = Orientation.Portrait //Orientacion de pagina
                 },
                 //Parámetros de configuración
@@ -88,7 +89,8 @@ namespace CreadorPDF_de_HTML_Net_MVC6.Controllers
             {
                 GlobalSettings = new GlobalSettings()
                 {
-                    PaperSize = PaperKind.A6,
+                    //PaperSize = PaperKind.A6, //Tam de pagina
+                    PaperSize = new PechkinPaperSize("170", "375"), //Tam de papel personalizado Width y height
                     Orientation = Orientation.Portrait
                 },
 
