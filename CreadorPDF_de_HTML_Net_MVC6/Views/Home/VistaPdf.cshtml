@@ -1,4 +1,4 @@
-﻿@* min 11:30 aprox 
+﻿@* min 11:30 aprox
     estructura de mi html a pdf
 *@
 @{
@@ -42,213 +42,201 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"]Portafolio Web 2023</title>   
+    <title>@ViewData["Title"]Portafolio Web 2023</title>
     <style>
-        /*Toda la página*/
+        /*Se aplica o todo el documento*/
+        * {
+            /*background-color: #2B2A33;*/
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
 
-:root {
-    --colorGlobalCV: #0d6efd;
-    --celestesimple: #4e91f5;
-    --blanco: white;
-}
+        .container {
+            /*  background-color: #2B2A33;
+            padding: 40px;
+            padding-top: 10px; */
+        }
 
-/*Se aplica o todo el documento*/
-* {
-    /*background-color: #2B2A33;*/
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-}
+        .cv-estructura {
+            /*  margin: 10px 180px;
+            background-color: var(--blanco);
+            padding: 40px; */
+        }
 
-.container {
-   /*  background-color: #2B2A33;
-    padding: 40px;
-    padding-top: 10px; */
-}
+        /*Nombre*/
+        .titulo {
+            font-weight: 600;
+            color: #0d6efd;
+            /*background-color: var(--colorGlobalCV);*/
+            font-size: 50px;
+            /*margin-bottom: 5px;*/
+        }
 
-.cv-estructura {
-   /*  margin: 10px 180px;
-    background-color: var(--blanco);
-    padding: 40px; */
-}
-
-/*Nombre*/
-.titulo {
-    font-weight: 600;
-    color: var(--colorGlobalCV);
-    /*background-color: var(--colorGlobalCV);*/
-    font-size: 50px;
-    /*margin-bottom: 5px;*/
-}
-
-/*Ocupación/Profesion*/
-.subtitulo {
-    font-weight: 600;
-    font-size: 25px;
-    /*Color de subtitulo*/
-    margin-bottom: 22px;
-}
+        /*Ocupación/Profesion*/
+        .subtitulo {
+            font-weight: 600;
+            font-size: 25px;
+            /*Color de subtitulo*/
+            margin-bottom: 22px;
+        }
 
 
-/*Sección o cuadro de contacto*/
-.contacto {
-    margin: 10px 20px;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    border: 6px solid var(--colorGlobalCV);
-    padding: 10px;
-    font-size: 17px;
-    /*position: center;*/
-    /*margin-left: 10%;*/
-}
+        /*Sección o cuadro de contacto*/
+        .contacto {
+            margin: 10px 20px;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            border: 6px solid #0d6efd;
+            padding: 10px;
+            font-size: 17px;
+            /*position: center;*/
+            /*margin-left: 10%;*/
+        }
 
-/*Mantener centrados los elementos de contacto*/
-.linkedin, .phone, .mapa, .gmail, .github {
-    font-weight: 500;
-    margin: auto;
-    color: var(--colorGlobalCV);
-    text-decoration: none;
-    /*display: flex;
-    align-content: end;
-    align-items: end; */
-}
+        /*Mantener centrados los elementos de contacto*/
+        .linkedin, .phone, .mapa, .gmail, .github {
+            font-weight: 500;
+            margin: auto;
+            color: #0d6efd;
+            text-decoration: none;
+            /*display: flex;
+            align-content: end;
+            align-items: end; */
+        }
 
-/*Descripción o perfil*/
-.descripcion-perfil {
-    /*font-weight: 100;*/
-    margin: 1.5rem 0 1.5rem 0;
-    /*Justificar el texto*/
-    text-align: justify;
-    font-size: 16px;
-    line-height: 1.6;
-}
+        /*Descripción o perfil*/
+        .descripcion-perfil {
+            /*font-weight: 100;*/
+            margin: 1.5rem 0 1.5rem 0;
+            /*Justificar el texto*/
+            text-align: justify;
+            font-size: 16px;
+            line-height: 1.6;
+        }
 
-.titulo-seccion {
-    font-size: 25px;
-    font-weight: 600;
-    color: var(--colorGlobalCV);
-    /*padding-top: 1rem;*/
-    padding-top: 1rem;
-}
+        .titulo-seccion {
+            font-size: 25px;
+            font-weight: 600;
+            color: #0d6efd;
+            /*padding-top: 1rem;*/
+            padding-top: 1rem;
+        }
 
-.seccion-expreriencia {
-    margin-bottom: 30px;
-}
+        .seccion-expreriencia {
+            margin-bottom: 30px;
+        }
 
-/*Mantener en la misma linea titulo y fechas*/
-.titulo-exp {
-    /*margin: 20px;*/
-    margin-top: 20px;
-    margin-bottom: 8px;
-    display: flex;
-    font-weight: 600;
-}
+        /*Mantener en la misma linea titulo y fechas*/
+        .titulo-exp {
+            /*margin: 20px;*/
+            margin-top: 20px;
+            margin-bottom: 8px;
+            display: flex;
+            font-weight: 600;
+        }
 
-/*Para mostrar la fecha a la izquierda y centrada de titulo exp*/
-.fechas {
-    /*16px cambia según el tamaño del texto */
-    margin: 0px 0 0 auto;
-}
+        /*Para mostrar la fecha a la izquierda y centrada de titulo exp*/
+        .fechas {
+            /*16px cambia según el tamaño del texto */
+            margin: 0px 0 0 auto;
+        }
 
-.subtitulo-exp {
-    margin-bottom: 8px;
-    color: grey;
-    font-weight: 600;
-}
+        .subtitulo-exp {
+            margin-bottom: 8px;
+            color: grey;
+            font-weight: 600;
+        }
 
-.descripcion-exp {
-    text-align: justify;
-    margin-bottom: 30px;
-    font-size: 16px;
-    line-height: 1.6;
-    /*margin: auto 40px 0 40px;*/
-}
+        .descripcion-exp {
+            text-align: justify;
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.6;
+            /*margin: auto 40px 0 40px;*/
+        }
 
-/*Formato para todos los Unorder List y los elementos dentro*/
-ul {
-    font-weight: 100;
-    margin-top: 0px;
-    list-style: none; /*Quitamos los marcadores */
-    padding: 0; /*Quitamos el padding por defecto de la lista */
-    /*margin-left: 20px;*/ /*Separamos la lista de la izquierda */
-}
+        /*Formato para todos los Unorder List y los elementos dentro*/
+        ul {
+            font-weight: 100;
+            margin-top: 0px;
+            list-style: none; /*Quitamos los marcadores */
+            padding: 0; /*Quitamos el padding por defecto de la lista */
+            /*margin-left: 20px;*/ /*Separamos la lista de la izquierda */
+        }
 
-li::before { /*Añadimos contenido antes de cada elemento de la lista */
-    content: "\2022"; /*Insertamos el marcador */
-    font-size: 20px;
-    padding-right: 8px; /*Establecemos el espacio entre las viñetas y el list item */
-    color: var(--colorGlobalCV); /*Coloreamos la viñeta */
-}
-
-
-/*Sección educación*/
-.seccion-educacion {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-}
-
-    .seccion-educacion ul {
-        /*font-weight: 600;*/
-        line-height: 1;
-        font-size: 16px;
-        /*word-wrap: normal;*/
-        /*word-spacing: 5px;*/
-    }
-
-.seccion-cursos {
-    margin-bottom: 2rem;
-}
-
-    .seccion-cursos ul {
-        /*font-weight: 600;*/
-        line-height: 0.80;
-        /*word-wrap: normal;*/
-        /*word-spacing: 5px;*/
-    }
-
-/*Sección tecnologías*/
-.seccion-tecnologias {
-    margin-top: 1rem;
-}
-
-.tec {
-    margin-bottom: 20px;
-}
-/*Para dividir las tecnologias en columnas*/
-.texto-columnas {
-    /*margin-top: 1rem;*/
-    font-size: 16px;
-    margin: 20px auto 0 22%;
-    column-count: 2;
-    column-gap: 20px;
-    list-style: none;
-    line-height: 1.3;
-    /*Hace un diseño como de borde en la columna*/
-    column-rule: 4px none gray;
-    /*Para integrar a navegadores Chrome y Safari*/
-    -webkit-column-count: 2;
-    -webkit-column-gap: 20px;
-    /*-webkit-column-rule: 4px double black;*/
-    /*Para integrar a Firefox*/
-    -moz-column-count: 2;
-    -moz-column-gap: 20px;
-    /*-moz-column-rule: 4px double black;*/
-    /*Para integrar a Opera*/
-    -o-column-count: 2;
-    -o-column-gap: 20px;
-    /*-o-column-rule: 4px double black;*/
-    /*Para integrar a Interner Explorer (Edge)*/
-    -ms-column-count: 2;
-    -ms-column-gap: 20px;
-    /*-ms-column-rule: 4px double black;*/
-    /*vertical-align: central;*/
-    /*Hace un diseño como de borde en la columna*/
-    /*column-rule: 4px dotted gray;*/
-}
+        li::before { /*Añadimos contenido antes de cada elemento de la lista */
+            content: "\2022"; /*Insertamos el marcador */
+            font-size: 20px;
+            padding-right: 8px; /*Establecemos el espacio entre las viñetas y el list item */
+            color: #0d6efd; /*Coloreamos la viñeta */
+        }
 
 
+        /*Sección educación*/
+        .seccion-educacion {
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
 
+            .seccion-educacion ul {
+                /*font-weight: 600;*/
+                line-height: 1;
+                font-size: 16px;
+                /*word-wrap: normal;*/
+                /*word-spacing: 5px;*/
+            }
 
+        .seccion-cursos {
+            margin-bottom: 2rem;
+        }
+
+            .seccion-cursos ul {
+                /*font-weight: 600;*/
+                line-height: 0.80;
+                /*word-wrap: normal;*/
+                /*word-spacing: 5px;*/
+            }
+
+        /*Sección tecnologías*/
+        .seccion-tecnologias {
+            margin-top: 1rem;
+        }
+
+        .tec {
+            margin-bottom: 20px;
+        }
+        /*Para dividir las tecnologias en columnas*/
+        .texto-columnas {
+            /*margin-top: 1rem;*/
+            font-size: 16px;
+            margin: 20px auto 0 22%;
+            column-count: 2;
+            column-gap: 20px;
+            list-style: none;
+            line-height: 1.3;
+            /*Hace un diseño como de borde en la columna*/
+            column-rule: 4px none gray;
+            /*Para integrar a navegadores Chrome y Safari*/
+            -webkit-column-count: 2;
+            -webkit-column-gap: 20px;
+            /*-webkit-column-rule: 4px double black;*/
+            /*Para integrar a Firefox*/
+            -moz-column-count: 2;
+            -moz-column-gap: 20px;
+            /*-moz-column-rule: 4px double black;*/
+            /*Para integrar a Opera*/
+            -o-column-count: 2;
+            -o-column-gap: 20px;
+            /*-o-column-rule: 4px double black;*/
+            /*Para integrar a Interner Explorer (Edge)*/
+            -ms-column-count: 2;
+            -ms-column-gap: 20px;
+            /*-ms-column-rule: 4px double black;*/
+            /*vertical-align: central;*/
+            /*Hace un diseño como de borde en la columna*/
+            /*column-rule: 4px dotted gray;*/
+        }
 
     </style>
 </head>

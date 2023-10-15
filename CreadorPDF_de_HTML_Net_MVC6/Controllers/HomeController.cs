@@ -51,7 +51,7 @@ namespace CreadorPDF_de_HTML_Net_MVC6.Controllers
                 //Parámetros de configuración global settings
                 GlobalSettings = new GlobalSettings()
                 {
-                    PaperSize = PaperKind.A4, //Tam de pagina
+                    PaperSize = PaperKind.LegalExtra, //Tam de pagina
                     Orientation = Orientation.Portrait //Orientacion de pagina
                 },
                 //Parámetros de configuración
@@ -88,7 +88,7 @@ namespace CreadorPDF_de_HTML_Net_MVC6.Controllers
             {
                 GlobalSettings = new GlobalSettings()
                 {
-                    PaperSize = PaperKind.A4,
+                    PaperSize = PaperKind.A6,
                     Orientation = Orientation.Portrait
                 },
 
