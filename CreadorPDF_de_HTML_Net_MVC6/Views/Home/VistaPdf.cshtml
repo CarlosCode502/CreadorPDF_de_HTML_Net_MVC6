@@ -5,7 +5,7 @@
     Layout = null;
 }
 
-<!DOCTYPE html>
+@* <!DOCTYPE html>
 
 <html>
 <head>
@@ -35,3 +35,256 @@
 
 </body>
 </html>
+ *@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]Portafolio Web 2023</title>
+    @* Bootstrap *@
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" /> *@
+    @* CSS *@
+    <link rel="stylesheet" href="~/css/cv.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/botones-desing.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/footer.css" asp-append-version="true" />
+    <!--//V#52 Instalando íconos de Boostrap-->
+    <!--Lo encontramos en la pag de boostrap en el apartado de descargas-->
+    @* <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> *@
+</head>
+<body>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @* @RenderBody() *@
+            <div class="cv-estructura">
+
+                <div class="titulo">
+                    <p>Carlos Herrera</p>
+                </div>
+                <div class="subtitulo">
+                    <p>Desarrollador .Net JR</p>
+                </div>
+
+                <div class="contacto" id="contacto-padre" title="Contactame por:">
+                    @* Icono de linedin *@
+                    <a onmouseenter="child_hover0(this)" onmouseout="child_exit0(this)" href="https://linkedin.com/in/carlos-herrera-code502" class="linkedin" rel="noopener noreferrer" target="_blank">
+                        Linkedin
+                    </a>
+                    @* Icono de correo *@
+                    <a onmouseenter="child_hover1(this)" onmouseout="child_exit1(this)" asp-action="Contacto" class="gmail">
+                        Gmail
+                    </a>
+                    @* Icono mapa *@
+                    <a onmouseenter="child_hover2(this)" onmouseout="child_exit2(this)" href="https://maps.app.goo.gl/Qzxp8tradUsZcMwM6" class="mapa" rel="noopener noreferrer" target="_blank">
+                        Ubicación
+                    </a>
+                    @* Icono de teléfono *@
+                    <a onmouseenter="child_hover3(this)" onmouseout="child_exit3(this)" href="https://wa.me/42814067" class="phone" rel="noopener noreferrer" target="_blank">
+                        WhatsApp
+                    </a>
+                    @* Icono de github *@
+                    <a onmouseenter="child_hover4(this)" onmouseout="child_exit4(this)" href="https://github.com/CarlosCode502" class="github" rel="noopener noreferrer" target="_blank">
+                        GitHub
+                    </a>
+                </div>
+
+                <div class="descripcion-perfil">
+                    @* <p>Soy un apasionado desarrollador junior con una sólida base en programación y un deseo enorme de crecer y aprender en la industria de la tecnología. Desde que di mis primeros pasos en la programación, he sentido una fascinación constante por la forma en que el código puede dar vida a ideas y soluciones innovadoras.</p> *@
+                    <p>Tengo 2 años de experiencia en programación, análisis y desarrollo de sistemas. Mi enfoque se centra en resolver problemas, construir software eficiente de alta calidad y mejorar constantemente mis habilidades técnicas. Valoro la colaboración y el trabajo en equipo, y estoy comprometido a contribuir al éxito de los proyectos en los que participo.</p>
+                </div>
+
+                <div class="seccion-expreriencia">
+                    @* Este span va a servir luego para el diseño de las secciones *@
+                    <div class="bloque-izquierdo-1"></div>
+                    <hr />
+                    <div class="titulo-seccion">
+                        <p>Experiencia:</p>
+                    </div>
+
+                    @* AQUI VOY A PONER MI EXPERIENCIA QUE VOY A TRAER DE UN FOR *@
+
+                    <div class="exp-d-1">
+                        <div class="titulo-exp">
+                            <p>Desarrollador Junior Independiente</p>
+                            <p class="fechas">2022 - Actualmente</p>
+                        </div>
+                        <div class="subtitulo-exp">
+                            <p>Profesional Independiente</p>
+                        </div>
+                        <div class="descripcion-exp">
+                            <p>Desarrollo de distintos sistemas web, escritorio y móvil utilizando patrones de diseño, principios de buenas prácticas haciendo uso de distintos softwares y tecnologías.</p>
+                        </div>
+                    </div>
+
+                    <div class="exp-d-2">
+                        <div class="titulo-exp">
+                            <p>Desarrollador Android</p>
+                            <p class="fechas">2021/09 - 2021/11</p>
+                        </div>
+                        <div class="subtitulo-exp">
+                            <p>Asilo de Ancianos San Vicente de Paúl</p>
+                        </div>
+                        <div class="descripcion-exp">
+                            <p>Desarrollo de una aplicación Android para el monitoreo de una camara de videovigilancia ip de un módulo ESP32-Cam conectado a través de una red LAN.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion-educacion">
+                    @* Este span va a servir luego para el diseño de las secciones *@
+                    <div class="bloque-izquierdo-1"></div>
+                    <hr />
+                    <div class="titulo-seccion">
+                        <p>Educación:</p>
+                    </div>
+
+                    @* AQUI PONGO MI EDUCACIÓN *@
+                    <div class="edu-d-1">
+                        <div class="titulo-exp">
+                            <p>Universidad de Occidente "Udeo"</p>
+                            <p class="fechas">2018 - 2021</p>
+                        </div>
+                        <ul>
+                            <li>Ingeniería en Sistemas.</li>
+                        </ul>
+                    </div>
+
+                    <div class="edu-d-2">
+                        <div class="titulo-exp">
+                            <p>Colegio privado mixto "Americano"</p>
+                            <p class="fechas">2016 - 2017</p>
+                        </div>
+                        <ul>
+                            <li>Bachiller en computación.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="seccion-cursos">
+                    @* Este span va a servir luego para el diseño de las secciones *@
+                    <div class="bloque-izquierdo-1"></div>
+                    <hr />
+                    <div class="titulo-seccion ">
+                        <p>Cursos y Certificaciones:</p>
+                    </div>
+                    @* AQUI PONGO MIS CURSOS O CERTIFICACIONES *@
+                    <div class="edu-d-1">
+                        <div class="titulo-exp">
+                            <ul>
+                                <li>Aprende .Net MVC6 haciendo proyectos.</li>
+                            </ul>
+                            @* <p class="fechas">2018 - 2021</p> *@
+                        </div>
+                        @*             <ul>
+                        <li>Ingeniería en Sistemas</li>
+                        </ul> *@
+                    </div>
+
+                    <div class="edu-d-1">
+                        <div class="titulo-exp">
+                            <ul>
+                                <li>Curso completo de .Net MVC5.</li>
+                            </ul>
+                            @* <p class="fechas">2018 - 2021</p> *@
+                        </div>
+                        @*             <ul>
+                        <li>Ingeniería en Sistemas</li>
+                        </ul> *@
+                    </div>
+
+                    <div class="edu-d-2">
+                        <div class="titulo-exp">
+                            <ul>
+                                <li>Diseño básico de páginas web.</li>
+                            </ul>
+                            @* <p class="fechas">2018 - 2021</p> *@
+                        </div>
+                        @*             <ul>
+                        <li>Ingeniería en Sistemas</li>
+                        </ul> *@
+                    </div>
+
+                    <div class="edu-d-1">
+                        <div class="titulo-exp">
+                            <ul>
+                                <li>Programación por capas C# y SQL.</li>
+                            </ul>
+                            @* <p class="fechas">2018 - 2021</p> *@
+                        </div>
+                        @*             <ul>
+                        <li>Ingeniería en Sistemas</li>
+                        </ul> *@
+                    </div>
+
+                    <div class="edu-d-1">
+                        <div class="titulo-exp">
+                            <ul>
+                                <li>Introducción a la programación.</li>
+                            </ul>
+                            @* <p class="fechas">2018 - 2021</p> *@
+                        </div>
+                        @*             <ul>
+                        <li>Ingeniería en Sistemas</li>
+                        </ul> *@
+                    </div>
+
+                    <div class="edu-d-1">
+                        <div class="titulo-exp">
+                            <ul>
+                                <li>Introducción a la ciberseguridad.</li>
+                            </ul>
+                            @* <p class="fechas">2018 - 2021</p> *@
+                        </div>
+                        @*             <ul>
+                        <li>Ingeniería en Sistemas</li>
+                        </ul> *@
+                    </div>
+
+                    <div class="edu-d-1">
+                        <div class="titulo-exp">
+                            <ul>
+                                <li>Curso avanzado de Microsoft Office 2013.</li>
+                            </ul>
+                            @* <p class="fechas">2018 - 2021</p> *@
+                        </div>
+                        @*             <ul>
+                        <li>Ingeniería en Sistemas</li>
+                        </ul> *@
+                    </div>
+
+                </div>
+
+                @* AQUI VAN LAS TECNOLOGÍAS QUE MANEJO *@
+                <div class="seccion-tecnologias">
+                    @* Este span va a servir luego para el diseño de las secciones *@
+                    <div class="bloque-izquierdo-1"></div>
+                    <hr />
+                    <div class="titulo-seccion">
+                        <p>Tecnologías</p>
+                    </div>
+
+                    <div class="texto-columnas tec">
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JAVASCRIPT</li>
+                            <li>BOOTSTRAP</li>
+                            <li>JQUERY</li>
+                            <li>JAVA</li>
+                            <li>PHP</li>
+                            <li>.NET</li>
+                            <li>C#</li>
+                            <li>SQL</li>
+                            <li>MYSQL</li>
+                            <li>SENDGRID</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>
+
