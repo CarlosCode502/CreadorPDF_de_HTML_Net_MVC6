@@ -157,6 +157,10 @@ li::before { /*Añadimos contenido antes de cada elemento de la lista */
         /*word-spacing: 5px;*/
     }
 
+.seccion-idiomas .negrita {
+    font-weight: 600;
+}
+
 /*Sección tecnologías*/
 .seccion-tecnologias {
     margin-top: 1rem;
