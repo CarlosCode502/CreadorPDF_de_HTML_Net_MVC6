@@ -43,7 +43,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]Portafolio Web 2023</title>
-    <link rel="stylesheet" href="~/css/cv.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/cv.css" asp-append-version="true" />
 </head>
 <body>
     <div class="container">
@@ -79,6 +79,10 @@
                     @* Icono de github *@
                     <a onmouseenter="child_hover4(this)" onmouseout="child_exit4(this)" href="https://github.com/CarlosCode502" class="github" target="_blank" rel="noopener noreferrer">
                         GitHub
+                    </a>
+                    @* Portafolio *@
+                    <a onmouseenter="child_hover2(this)" onmouseout="child_exit2(this)" href="https://portafolio-carlos-herrera-code502" class="mapa" target="_blank" rel="noopener noreferrer">
+                        Portafolio
                     </a>
                 </div>
 
@@ -286,20 +290,28 @@
                     </div>
 
                     <div class="texto-columnas tec">
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JAVASCRIPT</li>
-                            <li>BOOTSTRAP</li>
-                            <li>JQUERY</li>
-                            <li>JAVA</li>
-                            <li>PHP</li>
-                            <li>.NET</li>
-                            <li>C#</li>
-                            <li>SQL</li>
-                            <li>MYSQL</li>
-                            <li>SENDGRID</li>
-                        </ul>
+                        <div class="col1">
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JAVASCRIPT</li>
+                                <li>BOOTSTRAP</li>
+                                <li>JQUERY</li>
+                                <li>JAVA</li>
+                                <li>PHP</li>
+                            </ul>
+                        </div>
+                        <div class="col2">
+                            <ul>
+                                <li>.NET</li>
+                                <li>C#</li>
+                                <li>SQL</li>
+                                <li>MYSQL</li>
+                                <li>SENDGRID</li>
+                                <li>GITHUB</li>
+                                <li>GIT</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
