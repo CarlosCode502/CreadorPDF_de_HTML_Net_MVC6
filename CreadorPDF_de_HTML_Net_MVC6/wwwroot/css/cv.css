@@ -28,22 +28,29 @@
 .contacto {
     margin: 10px 20px;
     display: flex;
-    align-content: center;
-    align-items: center;
+    /*    align-content: center;
+    align-items: center;*/
+    text-align: center;
     border: 6px solid #0d6efd;
     padding: 10px;
     /*font-size: 17px;*/
     font-size: 1.0625em;
     /*position: center;*/
     /*margin-left: 10%;*/
+    
 }
 
 /*Mantener centrados los elementos de contacto*/
-.linkedin, .phone, .mapa, .gmail, .github {
+.linkedin, .phone, .mapa, .gmail, .github, .portafolio {
     font-weight: 500;
-    margin: auto;
+    /*margin: auto;*/
+    padding-right: 5%;
     color: #0d6efd;
     text-decoration: none;
+}
+
+.portafolio {
+    padding-right: 0%;
 }
 
 /*Descripción o perfil*/
@@ -165,16 +172,32 @@ li::before { /*Añadimos contenido antes de cada elemento de la lista */
 }
 
 .tec {
-    margin-bottom: 20px;
+    margin-top: 15px;
 }
 /*Para dividir las tecnologias en columnas*/
 .texto-columnas {
     /*margin-top: 1rem;*/
-     font-size: 16px;
-    margin: 20px auto 0 20px;
+    font-size: 16px;
+    /*margin: 20px auto 0 20px;*/
     /*display: flex;*/
 }
-    /*
+
+    .texto-columnas .col1 {
+        position: absolute;
+        bottom: 0px;
+        left: 25%;
+        width: 200px;
+        margin-top: 20px;
+        /*background-color: #ffff55;*/
+    }
+
+    .texto-columnas .col2 {
+        margin-left: 60%;
+        margin-right: 20px;
+        margin-top: 20px;
+        /*background-color: #ffffbb;*/
+    }
+/*
     .texto-columnas .col1 {
         display: flex;
     }
@@ -191,8 +214,8 @@ li::before { /*Añadimos contenido antes de cada elemento de la lista */
     .seccion-tecnologias ul li {
         text-decoration: none;
         display: inline-block;*/
-        /*margin: 0 0 1.6875em 0;*/
-        /*padding: 0.35em 0 0 2.5em;
+/*margin: 0 0 1.6875em 0;*/
+/*padding: 0.35em 0 0 2.5em;
         position: relative;
         vertical-align: top;
         width: 48%;
@@ -202,8 +225,8 @@ li::before { /*Añadimos contenido antes de cada elemento de la lista */
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 15px;*/
-    /*margin-left: 208px;*/
-    /*padding: 15px;
+/*margin-left: 208px;*/
+/*padding: 15px;
     line-height: 2em;
     border-bottom: 1px solid #e42d40;
 }
