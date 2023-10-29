@@ -86,14 +86,16 @@ hr {
     /*margin: 20px;*/
     margin-top: 20px;
     margin-bottom: 8px;
-    display: flex;
     font-weight: 600;
+    display: flex;
 }
 
 /*Para mostrar la fecha a la izquierda y centrada de titulo exp*/
 .fechas {
     /*16px cambia según el tamaño del texto */
-    margin: 0px 0 0 auto;
+    /*font-size: 10px;*/
+    /*margin: 0px 0 0 auto;*/
+    /*display: flex;*/
 }
 
 .subtitulo-exp {
