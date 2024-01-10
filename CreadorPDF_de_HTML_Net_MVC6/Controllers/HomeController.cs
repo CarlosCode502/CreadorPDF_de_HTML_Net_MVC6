@@ -52,7 +52,7 @@ namespace CreadorPDF_de_HTML_Net_MVC6.Controllers
                 GlobalSettings = new GlobalSettings()
                 {
                     //PaperSize = PaperKind.Legal, //Tam de pagina
-                    PaperSize = new PechkinPaperSize("170", "380"), //Tam de papel personalizado Width y height
+                    PaperSize = new PechkinPaperSize("170", "390"), //Tam de papel personalizado Width y height
                     Orientation = Orientation.Portrait //Orientacion de pagina
                 },
                 //Parámetros de configuración
@@ -90,7 +90,7 @@ namespace CreadorPDF_de_HTML_Net_MVC6.Controllers
                 GlobalSettings = new GlobalSettings()
                 {
                     //PaperSize = PaperKind.A6, //Tam de pagina
-                    PaperSize = new PechkinPaperSize("170", "380"), //Tam de papel personalizado Width y height
+                    PaperSize = new PechkinPaperSize("170", "390"), //Tam de papel personalizado Width y height
                     Orientation = Orientation.Portrait
                 },
 
